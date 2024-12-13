@@ -269,8 +269,3 @@ The space complexity is O(n * m) as well, primarily due to storing data for all 
 4. Consider batch processing for updating site data to reduce database write operations.
 
 These optimizations could significantly improve performance, especially when dealing with a large number of clients and sites.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/41907225/7eaa1be5-858c-4d34-8324-d2d900287180/paste.txt
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/41907225/2345da79-7345-4f43-b7af-88ac460788c6/paste-2.txt
-[3] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/41907225/7eaa1be5-858c-4d34-8324-d2d900287180/paste.txt
