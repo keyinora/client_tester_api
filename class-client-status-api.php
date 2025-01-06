@@ -210,6 +210,7 @@ class Client_Status_API {
                 $client_sites = get_field(self::OXY_CLIENTS_DATA_FIELD);
                 if ($client_sites && isset($client_sites['sites'])) {
                     foreach ($client_sites['sites'] as $site) {
+                        if (!$site['include_in_client_reporting']) continue;
                         $sites[] = [
                             'site_name' => $site['site_name'],
                             'site_url' => $site['site_url'],
