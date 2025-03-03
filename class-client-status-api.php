@@ -120,9 +120,14 @@ class Client_Status_API {
         $updates = $site_data['response'];
         foreach ($clients as $client) {
             $client_sites = get_field(self::OXY_CLIENTS_DATA_FIELD, $client->ID);
-            if ($client_sites && isset($client_sites['sites'])) {
+            if ($client_sites && isset($client_sites['sites']) && isset($updates)) {
                 foreach ($client_sites['sites'] as $index => $site) {
-                    if ($this->normalize_url($site_url) === $this->normalize_url($site['site_url'])) {
+                    $temp_site_url = $site['site_url'];
+                    if ($site['does_this_host_do_staging_backups']){
+                        $temp_site_url = $site['alt_site_url'];
+                    }
+
+                    if ($this->normalize_url($site_url) === $this->normalize_url($temp_site_url)) {
                         $client_sites['sites'][$index]['core_updates'] = $updates['core-updated'];
                         $client_sites['sites'][$index]['plugin_updates'] = $updates['plugins-updated'];
                         $client_sites['sites'][$index]['backups_before_updates'] = $updates['backups'];
