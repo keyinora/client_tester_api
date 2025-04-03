@@ -3,7 +3,7 @@
  * Plugin Name: Client Status API
  * Plugin URI: https://captivation.agency/
  * Description: A WordPress plugin that manages and monitors client websites using cron jobs, REST API routes, and external API integrations.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: Barry Ross
  * Author URI: https://captivation.agency/
  * License: GPL-2.0+
